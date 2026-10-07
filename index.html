@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navneet Purohit | Python Developer & GenAI Engineer</title>
+<meta name="description" content="Portfolio of Navneet Purohit, Python Developer at TCS building automation frameworks, data tools, and GenAI/RAG applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0f14; --surface:#121820; --line:#1f2933; --text:#e6edf3; --muted:#8b98a5;
+  --accent:#4ade80; --accent-2:#38bdf8;
+}
+:root[data-theme="light"]{
+  --bg:#f7f8fa; --surface:#ffffff; --line:#e2e6ea; --text:#12181f; --muted:#5b6672;
+  --accent:#15803d; --accent-2:#0369a1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.1rem}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;font-size:.92rem;color:var(--muted)}
+nav ul a:hover{color:var(--text)}
+#theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:.9rem}
+@media(max-width:720px){nav ul{display:none}}
+.hero{padding:96px 0 72px}
+.tag{font-family:"JetBrains Mono",monospace;font-size:.85rem;color:var(--accent);margin-bottom:16px}
+h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.08;letter-spacing:-.02em}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:620px;margin-top:22px;color:var(--muted);font-size:1.08rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{padding:11px 20px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--line)}
+.btn.primary{background:var(--accent);color:#06210f;border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:56px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.stat b{display:block;font-family:"Space Grotesk",sans-serif;font-size:1.8rem;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--muted)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-family:"Space Grotesk",sans-serif;font-size:1.7rem;margin-bottom:28px}
+h2::before{content:"// ";color:var(--accent);font-family:"JetBrains Mono",monospace;font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card h3{font-family:"Space Grotesk",sans-serif;font-size:1.1rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.chip{font-family:"JetBrains Mono",monospace;font-size:.75rem;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--accent-2)}
+.job{border-left:2px solid var(--accent);padding-left:22px}
+.job .meta{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--muted);margin:4px 0 14px}
+.job ul{padding-left:18px;color:var(--muted)}
+.job li{margin-bottom:8px}
+.job li b{color:var(--text);font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.skills h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.list{list-style:none}
+.list li{padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.list li b{color:var(--text);font-weight:500}
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:520px;margin:0 auto 26px}
+footer{padding:28px 0;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">navneet<span>.</span>dev</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme" aria-label="Toggle theme">◐</button>
+  </div>
+</nav>
+
+<main id="top">
+<div class="wrap hero">
+  <div class="tag">&gt; hello, world. I'm</div>
+  <h1>Navneet Purohit,<br>I build <em>automation, data tools &amp; GenAI</em> systems.</h1>
+  <p>Python Developer at TCS with 4+ years in backend automation, monitoring and data engineering. Lately I'm building RAG and agentic AI tools that turn production noise into actionable answers.</p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">View projects</a>
+    <a class="btn" href="https://github.com/navneetpurohitt" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/navneet-purohit-305416149/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>600+</b><span>batch jobs optimized</span></div>
+    <div class="stat"><b>25%</b><span>faster batch cycle time</span></div>
+    <div class="stat"><b>180+</b><span>web pages monitored</span></div>
+    <div class="stat"><b>3×</b><span>TCS Star Performer</span></div>
+  </div>
+</div>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="job">
+    <h3>System Engineer (Python Developer), Tata Consultancy Services</h3>
+    <div class="meta">July 2021 – Present</div>
+    <ul>
+      <li><b>SOP automation:</b> led frameworks for report generation, data validation and cleanup, visualization, batch orchestration and monitoring.</li>
+      <li><b>Batch performance:</b> optimized 600+ batch jobs, cutting MS Orchestrator batch cycle time by up to 25%.</li>
+      <li><b>Ignio in BFSI:</b> integrated Ignio into BFSI environments, reducing operational effort by up to 30%.</li>
+      <li><b>RTEE framework:</b> developed a test automation framework monitoring 180+ web pages.</li>
+      <li><b>Reliability:</b> performed RCA on production and batch failures; built end-to-end monitoring, logging and alerting, plus reusable Python components for batch validation and status tracking.</li>
+      <li><b>GenAI:</b> built an Agentic AI-powered RAG tool that detects recurring incidents and recommends resolutions.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>AI Document Q&amp;A (RAG)</h3>
+      <p>Ask questions over your own documents using vector embeddings, with JWT-based authentication and cloud deployment.</p>
+      <div class="chips"><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Embeddings</span></div>
+    </div>
+    <div class="card">
+      <h3>Financial Forecasting</h3>
+      <p>LSTM model predicting stock prices from historical data, served through an interactive Streamlit app.</p>
+      <div class="chips"><span class="chip">LSTM</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Streamlit</span></div>
+    </div>
+    <div class="card">
+      <h3>Sales Data Dashboard</h3>
+      <p>Interactive analytics dashboard with dynamic filters and KPI visualizations.</p>
+      <div class="chips"><span class="chip">Streamlit</span><span class="chip">Pandas</span><span class="chip">Seaborn</span><span class="chip">Matplotlib</span></div>
+    </div>
+    <div class="card">
+      <h3>Personal Finance Tracker</h3>
+      <p>Tracks income, expenses and savings with clear charts and summaries.</p>
+      <div class="chips"><span class="chip">Streamlit</span><span class="chip">Pandas</span><span class="chip">Seaborn</span></div>
+    </div>
+  </div>
+  <p style="margin-top:22px;color:var(--muted)">More: 20+ Python projects at <a href="https://github.com/navneetpurohitt/Python_Projects" target="_blank" rel="noopener" style="color:var(--accent)">github.com/navneetpurohitt/Python_Projects →</a></p>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card"><h3>Languages &amp; Core</h3><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">OOP</span></div></div>
+    <div class="card"><h3>Data &amp; ML</h3><div class="chips"><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">scikit-learn</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Plotly</span></div></div>
+    <div class="card"><h3>GenAI</h3><div class="chips"><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">LangChain</span><span class="chip">CrewAI</span><span class="chip">OpenAI API</span><span class="chip">Hugging Face</span><span class="chip">Gemini</span></div></div>
+    <div class="card"><h3>Backend &amp; Apps</h3><div class="chips"><span class="chip">Django</span><span class="chip">FastAPI</span><span class="chip">Streamlit</span></div></div>
+    <div class="card"><h3>Databases</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Chroma DB</span></div></div>
+    <div class="card"><h3>Tools &amp; Cloud</h3><div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">SourceTree</span><span class="chip">Docker</span><span class="chip">AWS</span></div></div>
+  </div>
+</div></section>
+
+<section id="achievements"><div class="wrap">
+  <h2>Achievements &amp; Certifications</h2>
+  <div class="grid">
+    <ul class="list">
+      <li><b>TCS Star Performer</b>, 3 times in 4 years</li>
+      <li><b>HackerRank 5-star Gold Badge</b> in Problem Solving and Python (2019)</li>
+      <li><b>HackerEarth</b> rank 965 in Design &amp; Analysis of Algorithms, 2,209 in Data Structures (2019)</li>
+    </ul>
+    <ul class="list">
+      <li><b>IBM RAG and Agentic AI Professional Certificate</b>, Coursera (2026)</li>
+      <li><b>Complete Data Science, ML, DL, NLP Bootcamp</b>, Udemy (2025)</li>
+      <li><b>Web Application Technologies and Django</b>, Coursera (2020)</li>
+      <li><b>Object-Oriented Data Structures in C++</b>, Coursera (2020)</li>
+    </ul>
+  </div>
+  <p style="margin-top:22px;color:var(--muted)">B.Tech in Information Technology, Sagar Institute of Science Technology and Research, Bhopal (2017–2021).</p>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+  <h2 style="display:inline-block">Let's talk</h2>
+  <p>Open to Backend, Full-Stack and GenAI engineering roles. The quickest way to reach me is email.</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn primary" href="mailto:navnetpurohit1998@gmail.com">navnetpurohit1998@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/navneet-purohit-305416149/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div></section>
+</main>
+
+<footer>© <span id="yr"></span> Navneet Purohit · Indore, India</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+var root = document.documentElement;
+try { var saved = localStorage.getItem('theme'); if (saved) root.dataset.theme = saved; } catch(e){}
+document.getElementById('theme').onclick = function(){
+  var next = root.dataset.theme === 'light' ? 'dark' : 'light';
+  root.dataset.theme = next;
+  try { localStorage.setItem('theme', next); } catch(e){}
+};
+</script>
+</body>
+</html>
